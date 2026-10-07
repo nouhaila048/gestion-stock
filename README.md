@@ -9,3 +9,4 @@ Application PHP en ligne de commande de gestion de stock (POO)
 
 ## Équipe
 - Maroua =: classe Commande et index.php 
+- Nouhaila Hibat-Allah : Produit + Stock (A+B)
