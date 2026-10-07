@@ -40,3 +40,5 @@ class Stock
         return array_values(array_filter($this->produits, fn($p) => $p->getQuantite() < $seuil));
     }
 }
+
+# fix commit name
