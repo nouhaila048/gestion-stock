@@ -25,7 +25,7 @@ class Stock
     {
         $total = 0.0;
         foreach ($this->produits as $p) {
-            $total += $p->valeurStock();
+            $total += $p->getPrix(); // Bug introduit exprès : somme des prix au lieu de prix * quantité
         }
         return $total;
     }
