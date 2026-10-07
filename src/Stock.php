@@ -21,15 +21,14 @@ class Stock
 
     public function compter(): int { return count($this->produits); }
 
-    public function valeurTotale(): float
+public function valeurTotale(): float
     {
         $total = 0.0;
         foreach ($this->produits as $p) {
-            $total += $p->getPrix(); // Bug introduit exprès : somme des prix au lieu de prix * quantité
+            $total += $p->valeurStock();
         }
         return $total;
     }
-
     public function produitsEnRupture(): array
     {
         return array_values(array_filter($this->produits, fn($p) => $p->getQuantite() === 0));
