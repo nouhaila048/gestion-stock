@@ -8,3 +8,4 @@ Application PHP en ligne de commande de gestion de stock (POO)
 - Commande : ajouterLigne(), total(), valider(), estValidee(), afficher()
 
 ## Équipe
+   - Nouhaila Hibat-Allah : Produit + Stock (A+B)
