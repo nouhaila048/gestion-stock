@@ -37,4 +37,22 @@ class Commande
         }
         return $total;
     }
+        public function valider(): void
+    {
+        if ($this->validee) {
+            throw new LogicException("Commande déjà validée.");
+        }
+        if (empty($this->lignes)) {
+            throw new LogicException("Impossible de valider une commande vide.");
+        }
+        foreach ($this->lignes as $ligne) {
+            $ligne['produit']->retirerQuantite($ligne['quantite']);
+        }
+        $this->validee = true;
+    }
+
+    public function estValidee(): bool
+    {
+        return $this->validee;
+    }
 }
